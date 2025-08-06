@@ -1,0 +1,40 @@
+{
+	"name": "example 2",
+	"properties": {
+		"activities": [
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "timestamp",
+					"value": {
+						"value": "@addToTime(utcNow(),-1,'Day')",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"parameters": {
+			"pipelineRunid": {
+				"type": "string",
+				"defaultValue": "1234"
+			}
+		},
+		"variables": {
+			"timestamp": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2025-07-28T16:10:54Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

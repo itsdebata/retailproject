@@ -1,0 +1,30 @@
+{
+	"name": "nb_pipeline",
+	"properties": {
+		"activities": [
+			{
+				"name": "sample nb",
+				"type": "DatabricksNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.00:30:00",
+					"retry": 3,
+					"retryIntervalInSeconds": 60,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/sailudevs@gmail.com/base_parameter_nb"
+				},
+				"linkedServiceName": {
+					"referenceName": "Databricks_ls",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2025-07-29T10:47:13Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
